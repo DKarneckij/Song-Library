@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="481.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.songlibrary.Controller">
+   <children>
+      <Label text="Song Library">
+         <font>
+            <Font size="34.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <GridPane maxWidth="-Infinity" prefHeight="39.0" prefWidth="836.0" VBox.vgrow="NEVER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="8.799993896484375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="52.80000610351563" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAdd" prefHeight="26.0" prefWidth="126.0" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="addName" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="addArtist" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="addAlbum" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="addYear" prefHeight="26.0" prefWidth="68.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Name">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Artist" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Album" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Year" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="30.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </GridPane>
+      <AnchorPane>
+         <VBox.margin>
+            <Insets bottom="25.0" top="25.0" />
+         </VBox.margin>
+         <children>
+            <TableView fx:id="table" layoutX="22.0" prefHeight="240.0" prefWidth="830.0">
+              <columns>
+                <TableColumn fx:id="colName" prefWidth="404.79998207092285" text="Name" />
+                <TableColumn fx:id="colArtist" prefWidth="427.1999816894531" text="Artist" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <GridPane maxWidth="-Infinity" prefHeight="39.0" prefWidth="836.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="22.40003662109375" minHeight="0.0" prefHeight="12.00001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="27.199987792968752" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="editName" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="editArtist" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="editAlbum" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="editYear" prefHeight="26.0" prefWidth="68.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Name">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" />
+               </padding>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Artist" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" />
+               </padding>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Album" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" />
+               </padding>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Year" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" />
+               </padding>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="27.0" prefWidth="127.0" spacing="10.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <Button maxWidth="120.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="26.0" prefWidth="70.0" text="Edit" />
+                  <Button maxWidth="120.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="26.0" prefWidth="70.0" text="Delete" />
+               </children>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </GridPane>
+   </children>
+</VBox>
